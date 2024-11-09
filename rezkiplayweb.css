@@ -1,0 +1,429 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Agar tetap di atas konten lainnya */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+.header .logo {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.header nav a:hover {
+    color: #0073e6;
+}
+/* Styling Sections */
+.section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    position: relative;
+    border-left: 5px solid #0073e6;
+    padding-left: 30px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Section Titles with Icon */
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #0073e6;
+    display: flex;
+    align-items: center;
+}
+
+.section h2::before {
+    content: "📝"; /* Bisa diganti dengan ikon lain */
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+/* Highlighted Text Effect */
+.section-highlight {
+    display: inline-block;
+    background: #0073e6;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Animated Divider */
+.section-divider {
+    width: 50px;
+    height: 4px;
+    background-color: #0073e6;
+    margin: 20px 0;
+    animation: growWidth 1s ease;
+}
+
+@keyframes growWidth {
+    from { width: 0; }
+    to { width: 50px; }
+}
+
+/* Profile Image Styling */
+.profile-img {
+    width: 80px; /* Atur ulang ke ukuran yang diinginkan */
+    height: auto; /* Menyesuaikan proporsi gambar secara otomatis */
+    max-width: 100px; /* Menetapkan batasan lebar maksimum */
+    border-radius: 50%;
+    margin-bottom: 1em;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.hero .intro, .hero .description {
+    max-width: 40%;
+}
+
+.hero .intro h1 {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
+
+.hero .intro p, .hero .description h2, .hero .description p {
+    margin-bottom: 1em;
+}
+
+.buttons {
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+/* Section Styling */
+.section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #0073e6;
+}
+
+.section p, .section h3 {
+    margin: 10px 0;
+}
+
+/* Buttons */
+.talk-btn, .work-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.talk-btn {
+    background-color: #000;
+    color: #fff;
+}
+
+.work-btn {
+    border: 2px solid #000;
+    color: #000;
+}
+
+/* Social Icons */
+.social-icons {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+    font-size: 2em;
+}
+
+.social-icons a {
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Background Animation */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 115, 230, 0.1) 25%, transparent 25%) 0 0,
+                linear-gradient(225deg, rgba(0, 115, 230, 0.1) 25%, transparent 25%) 0 0,
+                linear-gradient(315deg, rgba(0, 115, 230, 0.1) 25%, transparent 25%) 0 0,
+                linear-gradient(45deg, rgba(0, 115, 230, 0.1) 25%, transparent 25%) 0 0;
+    background-size: 50px 50px;
+    animation: backgroundMove 10s linear infinite;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+@keyframes backgroundMove {
+    from { background-position: 0 0; }
+    to { background-position: 100px 100px; }
+}
+
+/* Blockquote Styling */
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    color: #555;
+}
+/* Background Styles for Each Section */
+#about {
+    background-color: #e8e9e9; /* Latar belakang biru muda */
+    padding: 60px 20px;
+    border-radius: 10px;
+}
+
+#skills {
+    background-color: #e8e9e8; /* Latar belakang pink muda */
+    padding: 60px 20px;
+    border-radius: 10px;
+}
+
+#goals {
+    background-color: #e8e9e8; /* Latar belakang hijau muda */
+    padding: 60px 20px;
+    border-radius: 10px;
+}
+
+#contact {
+    background-color: #e8e9e8; /* Latar belakang oranye muda */
+    padding: 60px 20px;
+    border-radius: 10px;
+}
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .hero .intro, .hero .description {
+        max-width: 90%; /* Mempersempit konten untuk perangkat mobile */
+    }
+
+    .header nav a {
+        font-size: 0.9em;
+        margin: 0 10px;
+    }
+}
+.nav-link.active {
+    color: #0073e6;
+    text-decoration: underline;
+}
+
+
+/* General Section Styling */
+.section {
+    margin: 20px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+/* Fade and Slide-in Animation */
+@keyframes smoothSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.section:hover {
+    background-color: #e8f4ff;
+    transition: background-color 0.3s ease;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.skill-bar {
+    margin: 10px 0;
+}
+
+.bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #0073e6;
+    border-radius: 5px;
+}
+.portfolio-item {
+    text-align: center;
+    margin: 20px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+/* Reset margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.header {
+    position: fixed; /* Membuat navbar tetap di atas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Pastikan navbar selalu di atas elemen lain */
+}
+
+.header .logo {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.header .logo:hover {
+    color: #0073e6;
+}
+
+.header nav {
+    display: flex;
+    gap: 20px; /* Jarak antar tautan */
+}
+
+.header nav a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Animasi Underline pada Hover */
+.header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Jarak dari teks */
+    width: 0;
+    height: 2px;
+    background-color: #0073e6;
+    transition: width 0.3s ease;
+}
+
+.header nav a:hover::after,
+.header nav a.active::after {
+    width: 100%; /* Lebar penuh saat aktif atau hover */
+}
+
+.header nav a:hover {
+    color: #0073e6;
+}
+
+/* Responsif pada Layar Kecil */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .header nav {
+        display: none; /* Sembunyikan menu untuk ditampilkan dengan ikon */
+    }
+
+    /* Mobile Navbar */
+    .header .menu-icon {
+        font-size: 1.5em;
+        cursor: pointer;
+        display: inline-block;
+    }
+}
+
+/* Tampilan Aktif Menu saat Mobile */
+@media (max-width: 768px) {
+    .header nav.mobile-active {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+}
+
+
+/* Class to Add the Smooth Slide-in Effect */
+.smooth-slide-in {
+    animation: smoothSlideIn 0.4s ease-out forwards;
+}
