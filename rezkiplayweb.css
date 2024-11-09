@@ -12,20 +12,12 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-.nama-landing {
-    font-size: 2rem; /* Atur sesuai keinginan */
-    font-weight: 10; /* Untuk menambah ketebalan */
-    text-align: center; /* Agar teks berada di tengah */
-    margin-top: 10px; /* Sesuaikan margin sesuai kebutuhan */
-}
 /* Contoh efek hover pada tombol */
 .talk-btn:hover, .work-btn:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
-section {
-    scroll-margin-top: 90px; /* Sesuaikan dengan tinggi header */
-}
+
 /* Tambahkan efek transisi pada gambar portofolio */
 .portfolio-item img {
     transition: transform 0.3s ease;
@@ -106,6 +98,9 @@ footer {
     margin-right: 10px;
     font-size: 1.5em;
 }
+section {
+    scroll-margin-top: 90px; /* Sesuaikan dengan tinggi header */
+}
 
 /* Highlighted Text Effect */
 .section-highlight {
@@ -157,9 +152,9 @@ footer {
 }
 
 .hero .intro h1 {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: bold;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.1em;
 }
 
 .hero .intro p, .hero .description h2, .hero .description p {
@@ -171,7 +166,12 @@ footer {
     gap: 1em;
     margin-top: 1em;
 }
-
+.nama-landing {
+    font-size: 2rem; /* Atur sesuai keinginan */
+    font-weight: 10; /* Untuk menambah ketebalan */
+    text-align: center; /* Agar teks berada di tengah */
+    margin-top: 10px; /* Sesuaikan margin sesuai kebutuhan */
+}
 /* Section Styling */
 .section {
     padding: 60px 20px;
