@@ -85,3 +85,15 @@ document.addEventListener('DOMContentLoaded', () => {
         nav.classList.toggle('mobile-active'); // Menampilkan/menghilangkan menu saat di klik
     });
 });
+$(document).ready(function() {
+    $('nav a').on('click', function(e) {
+        e.preventDefault();
+        var target = $($(this).attr('href'));
+
+        // Sesuaikan offset dengan tinggi header
+        var offset = 90; // misalnya header setinggi 70px
+        $('html, body').animate({
+            scrollTop: target.offset().top - offset
+        }, 5050); // 500 ms durasi animasi
+    });
+});
