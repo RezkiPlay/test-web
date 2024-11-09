@@ -17,7 +17,9 @@ body {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
-
+section {
+    scroll-margin-top: 90px; /* Sesuaikan dengan tinggi header */
+}
 /* Tambahkan efek transisi pada gambar portofolio */
 .portfolio-item img {
     transition: transform 0.3s ease;
