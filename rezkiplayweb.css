@@ -12,7 +12,28 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+/* Contoh efek hover pada tombol */
+.talk-btn:hover, .work-btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
 
+/* Tambahkan efek transisi pada gambar portofolio */
+.portfolio-item img {
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0073e6;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
 /* Header */
 .header {
     display: flex;
