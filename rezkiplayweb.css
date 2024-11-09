@@ -12,6 +12,12 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+.nama-landing {
+    font-size: 2rem; /* Atur sesuai keinginan */
+    font-weight: 10; /* Untuk menambah ketebalan */
+    text-align: center; /* Agar teks berada di tengah */
+    margin-top: 10px; /* Sesuaikan margin sesuai kebutuhan */
+}
 /* Contoh efek hover pada tombol */
 .talk-btn:hover, .work-btn:hover {
     transform: scale(1.05);
